@@ -1,0 +1,12 @@
+## Backlog
+- Row count ranger
+- increasing range should duplicate existing rows
+- JWT
+- Random names
+- Random emails
+- Pretty
+- utf8>Base64
+- Base58
+- base conversion
+- history
+- persist settings

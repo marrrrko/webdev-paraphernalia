@@ -124,6 +124,7 @@ function App() {
         return
       case "now-utc-iso":
         setTheText(DateTime.utc().toISO())
+        return
       case "iso-to-msts":
         setTheText((currentText) => {
           if (DateTime.fromISO(currentText).isValid) {
@@ -135,7 +136,7 @@ function App() {
       case "msts-to-iso":
         setTheText((currentText) => {
           const ms = parseInt(currentText)
-          if (ms == currentText && ms > 0 && ms < 5000000000000)
+          if ((ms as any) == currentText && ms > 0 && ms < 5000000000000)
             return DateTime.fromMillis(ms).toUTC().toISO()
           else return currentText
         })
